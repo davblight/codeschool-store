@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pulling API Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Welcome Page -->
+        <div v-if="page == 'welcome'" id="welcome-page">
+            <h1>Welcome To My Totally Real Shop!</h1>
+            <button v-on:click="showShop">Enter</button>
+        </div>
+
+        <!-- Store Page -->
+        <div v-else-if="page == 'shop'" id="store-page">
+            <div id="top-bar">
+                <h2>Totally Real Shop</h2>
+                <button v-on:click="showCart">Cart</button>
+            </div>
+            <div id="shop-container">
+                <thing v-for="(product, index) in productList" v-bind:item="product" v-bind:cart="cart" v-bind:key="index" v-bind:page="page"></thing>
+            </div>
+        </div>
+
+        <!-- Cart Page -->
+        <div v-else-if="page == 'cart'" id="cart-page">
+            <div v-for="product in cart">
+                <thing v-for="(product, index) in cart" v-bind:item="product" v-bind:cart="cart" v-bind:key="index"></thing>
+                <button v-on:click="showShop">Continue Shopping</button>
+            </div>
+        </div>
+    </div>  
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
