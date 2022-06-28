@@ -1,3 +1,7 @@
+body {
+    margin: 0 0;
+    background-color: rgb(63, 60, 78)
+}
 #app {
     background-color: rgb(63, 60, 78);
 }
@@ -5,20 +9,60 @@
     padding: 10px;
     margin: 10px;
     max-width: 500px;
-    background-color: rgb(193, 193, 193);
+    background-color: rgb(167, 169, 203);
     text-align: center;
+    border-radius: 15px;
 }
 
-#shop-container {
+.shop-container {
     display: grid;
     grid-template-columns: 28vw 28vw 28vw;
     justify-content: center;
+    padding-top: 150px;
 }
-#top-bar {
+.top-bar {
     display: flex;
-    justify-content: space-around;
-    padding: 20px;
+    width: 100vw;
+    justify-content: space-evenly;
+    height: 150px;
+    background-color:rgb(41, 39, 50);
+    box-shadow: 0 2px 3px 0 rgb(0 0 0 / 18%);
+    position: fixed;
+}
+#cart-button {
+    padding: 5px;
+    height: 55px;
+    width: 70px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 20px;
+}
+.checkout-buttons {
+    padding: 5px;
+    height: 120px;
+    width: 150px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 20px;
+}
+h1 {
+    font-family: 'Oxygen', sans-serif;
 }
 h2 {
     color: white;
+    font-family: 'Yellowtail', cursive;
+    font-size: 42px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+p {
+    font-family: 'Dosis', sans-serif;
+}
+button {
+    border-color: rgb(190, 190, 190);
+    border-radius: 5px;
+    background-color:rgb(115, 109, 145);
+    color: white;
+    padding: 8px;
+    font-family: 'Oxygen', sans-serif;
 }

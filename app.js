@@ -5,8 +5,8 @@ Vue.component('thing', {
         <div class="item">
             <img v-bind:src="item.image" style="max-width: 100px">
             <h1>{{ item.title }}</h1>
-            {{ item.description }}<br><br>
-            <i>{{ item.price }}</i><br><br>
+            <p>{{ item.description }}<br><br>
+            <i>{{ item.price }}</i></p><br><br>
             <button v-if="page == 'shop'" v-on:click="addToCart()">Add to Cart</button>
         </div>
     `,
