@@ -8,6 +8,7 @@ Vue.component('thing', {
             <p>{{ item.description }}<br><br>
             <i>{{ item.price }}</i></p><br><br>
             <button v-if="page == 'shop'" v-on:click="addToCart()">Add to Cart</button>
+            <button v-if="page == 'cart'" v-on:click="removeFromCart()">Remove from Cart</button>
         </div>
     `,
     props: {
@@ -24,6 +25,9 @@ Vue.component('thing', {
     methods: {
         addToCart: function () {
             this.cart.push(this.item)
+        },
+        removeFromCart: function () {
+            this.cart.splice(this.cart.indexOf(this.item), 1)
         }
     },
 })

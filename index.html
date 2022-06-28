@@ -33,7 +33,7 @@
                 <button class="checkout-buttons">Checkout</button>
             </div>
             <div class="shop-container">
-                <thing v-for="(product, index) in cart" v-bind:item="product" v-bind:cart="cart" v-bind:key="index"></thing>
+                <thing v-for="(product, index) in cart" v-bind:item="product" v-bind:cart="cart" v-bind:key="index" v-bind:page="page"></thing>
             </div>
         </div>
     </div>  
